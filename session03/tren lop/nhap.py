@@ -45,8 +45,29 @@ clothes = ["T-shirt", "sweater"]
 #     print(item)
 
 
-a =[1,3,6,7,8,3]
-print(max(a))
-while True:
-    print("a")
-    break
+# a =[1,3,6,7,8,3]
+# print(max(a))
+# while True:
+#     print("a")
+#     break
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
