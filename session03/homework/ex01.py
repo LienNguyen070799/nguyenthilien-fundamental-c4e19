@@ -15,15 +15,24 @@ while loop:
        
     elif choose == "U" :
         update = int(input(" update position: "))
-        change = input (" New item: ")
-        clothes [update - 1] = change
-        print(" Our items: ", end ="")
-        print(*clothes, sep =", ")
+        if update > len(clothes):
+            print("invalid update location! Try again!")
+        else:
+            change = input (" New item: ")
+            clothes [update - 1] = change
+            print(" Our items: ", end ="")
+            print(*clothes, sep =", ")
     elif choose == "D":
         pos_del = int(input(" Delete position: "))
-        del(clothes[pos_del - 1])
-        print( " Our items: ", end = "")
-        print(*clothes, sep = ",")
+        if pos_del > len(clothes):
+            print("invalid update location! Try again!")
+        else:
+            del(clothes[pos_del - 1])
+            print( " Our items: ", end = "")
+            print(*clothes, sep = ",")
+    elif choose == "Exit":
+        print("Thank you! See you again!^-^")
+        break
     else :
         print( "Sorry, try again! ")
 
