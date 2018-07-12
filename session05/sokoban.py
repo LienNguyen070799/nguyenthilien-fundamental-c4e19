@@ -13,9 +13,9 @@ boxes = [
     {"x" : 3,"y" : 3}
 ]
 destinations = [
-    {"x": 2," y":1},
-    {"x": 3," y":2},
-    {"x": 4," y":3}
+    {"x": 2,"y":1},
+    {"x": 3,"y":2},
+    {"x": 4,"y":3}
 ]
 playing = True
 while playing:
@@ -29,7 +29,7 @@ while playing:
                     destinations_is_here = True
             player_is_here = False
             
-            if play["x"] == x and play["y"] == y:
+            if player["x"] == x and player["y"] == y:
                     player_is_here =True
             box_is_here = False
             for box in boxes:
@@ -42,7 +42,7 @@ while playing:
                 print("B", end = " ")
             elif destinations_is_here == True:
 
-                print("P", end =" ")
+                print("D", end =" ")
             
             else:
                 print("-", end =" ")
@@ -57,14 +57,14 @@ while playing:
         dy = 1
     elif move == "D":
         dx = 1
-    elif move == "S":
+    elif move == "A":
         dx = -1
     else:
         print("Buzzz")
         playing =False
-    if player["x"] +dx >= 0 and player["x"] +dx < 4 and player["y"] +dy >= 0 and player["y"] +dy < 4:
+    if 0 <= player["x"] +dx <= map['size_x'] and 0 <= player["y"] +dy <= map['size_y'] :
         player['x'] += dx
         player ['y'] += dy
-    for box in boxes:
-        if box["x"] == player ["x"] and box["y"] == player ["y"]:
+    # for box in boxes:
+    #     if box["x"] == player ["x"] and box["y"] == player ["y"]:
             
