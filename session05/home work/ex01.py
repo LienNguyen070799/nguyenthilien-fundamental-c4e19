@@ -9,7 +9,7 @@ inventory = {
 
 inventory['pocket'] =['seashell', 'strange berry', 'lint']
 del inventory['backpack'][1]
-inventory['gold'] = [500,50]
+inventory['gold'] = inventory['gold'] + 50
 for key, value in inventory.items() :
     print(key,value)
 
